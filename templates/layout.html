@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Mi Página Personal{% endblock %}</title>
+
+    <!-- Incluye Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/layout.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/projects.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <h1 class="navbar-brand">Ing.Bernardino de Aguas</h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
+                  href="{{ url_for('home') }}"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.endpoint == 'about' %}active{% endif %}"
+                  href="{{ url_for('about') }}"
+                  >Sobre mí</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.endpoint == 'projects' %}active{% endif %}"
+                  href="{{ url_for('projects') }}"
+                  >Proyectos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}"
+                  href="{{ url_for('contact') }}"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="content">{% block content %}{% endblock %}</div>
+    </main>
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2024 - Todos los derechos reservados</p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/bernardino-de-aguas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="{{ url_for('static', filename='img/linkedin-icon.png') }}"
+              alt="Linkedin"
+              class="icon mx-2"
+          /></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=3008054296"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="{{ url_for('static', filename='img/whatsapp-icon.png') }}"
+              alt="WhatsApp"
+              class="icon mx-2"
+          /></a>
+          <a
+            href="https://www.instagram.com/bernadh2o/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="{{ url_for('static', filename='img/instagram-icon.png') }}"
+              alt="Instagram"
+              class="icon mx-2"
+          /></a>
+          <a href="mailto:bdeaguas@dh2o.com.co"
+            ><img
+              src="{{ url_for('static', filename='img/email.png') }}"
+              alt="Correo"
+              class="icon mx-2"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!--     Incluye Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

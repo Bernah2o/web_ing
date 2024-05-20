@@ -1,0 +1,58 @@
+/* Estilos generales */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Sección "Sobre mí" */
+.about-section {
+  padding: 4rem 0;
+}
+
+.profile-image {
+  text-align: center;
+}
+
+.profile-image img {
+  max-width: 300px;
+}
+
+/* Sección "Habilidades" */
+.skills-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.skill-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* Estilos adicionales */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}

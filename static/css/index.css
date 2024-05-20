@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/* Estilos para el carousel */
+.carousel-indicators button {
+  background-color: #fff;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Asegurar que las imágenes se adapten bien en pantallas grandes */
+.carousel-inner .carousel-item {
+  max-height: 700px; /* Ajusta según la altura deseada */
+}
+
+@media (min-width: 1200px) {
+  .carousel-inner .carousel-item {
+    max-height: 800px;
+  }
+}

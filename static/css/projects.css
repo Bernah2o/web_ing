@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Sección de proyectos */
+.projects-section {
+  padding: 4rem 0;
+}
+
+.project-card {
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.project-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  margin-bottom: 1rem;
+}
+
+/* Estilos adicionales */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}

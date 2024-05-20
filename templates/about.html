@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block title %}Sobre mí - Mi Página Personal{%
+endblock %} {% block content %}
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="section-title">Sobre mí</h1>
+        <p class="lead">
+          Soy un profesional apasionado por [tu área de experiencia]. Con más de
+          [años de experiencia] en el campo, he adquirido habilidades sólidas en
+          [tus habilidades principales]. Me enorgullece entregar resultados
+          excepcionales y superar las expectativas de mis clientes.
+        </p>
+        <p>
+          Además de mi experiencia técnica, valoro la comunicación efectiva y la
+          colaboración. Creo firmemente en el trabajo en equipo y en establecer
+          relaciones duraderas con mis clientes para comprender sus necesidades
+          y brindar soluciones personalizadas.
+        </p>
+        <a href="{{ url_for('projects') }}" class="btn btn-primary"
+          >Ver proyectos</a
+        >
+      </div>
+      <div class="col-md-6">
+        <div class="profile-image">
+          <img
+            src="{{ url_for('static', filename='img/profile.jpg') }}"
+            alt="Tu nombre"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Habilidades</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="fas fa-code fa-3x"></i>
+          <h3>Desarrollo Web</h3>
+          <p>
+            Experiencia en desarrollo front-end y back-end utilizando
+            tecnologías como HTML, CSS, JavaScript, Python, Flask, y más.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="fas fa-palette fa-3x"></i>
+          <h3>Diseño UI/UX</h3>
+          <p>
+            Creación de interfaces de usuario atractivas y experiencias de
+            usuario intuitivas, utilizando principios de diseño centrado en el
+            usuario.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <i class="fas fa-database fa-3x"></i>
+          <h3>Gestión de Datos</h3>
+          <p>
+            Conocimientos en bases de datos relacionales y no relacionales, así
+            como en el manejo y análisis de datos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
